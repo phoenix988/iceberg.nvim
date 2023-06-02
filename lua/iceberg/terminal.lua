@@ -1,6 +1,6 @@
 local M = {}
-local cfg = vim.g.bamboo_config
-local c = require 'bamboo.colors'
+local cfg = vim.g.iceberg_config
+local c = require 'iceberg.colors'
 
 function M.setup()
   if not cfg.term_colors then return end

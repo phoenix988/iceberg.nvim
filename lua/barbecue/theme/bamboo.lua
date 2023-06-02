@@ -1,4 +1,4 @@
-local c = require('bamboo.colors')
+local c = require('iceberg.colors')
 
 return {
   normal = {
