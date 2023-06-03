@@ -1,0 +1,164 @@
+#+title: Iceberg.nvim
+#+author: Karl Fredin
+
+* TABLE OF CONTENTS
+- [[Intro]]
+- [[Features]]
+- [[Installation]]
+- [[Configuration]]
+  - [[Enable theme]]
+  - [[Default Configuration]]
+  - [[Vimscript Configuration]]
+  - [[Customization]]
+
+
+* Iceberg.nvim
+
+Dark blue theme for Neovim >= 0.5 forked from [[https://github.com/ribru17/bamboo.nvim][Bamboo.nvim]]. Theme written in Lua with [[https://github.com/nvim-treesitter/nvim-treesitter][Tree-sitter]] syntax highlighting.
+
+For latest [[https://github.com/nvim-treesitter/nvim-treesitter][Tree-sitter]] syntax highlighting, upgrade to Neovim 0.8.0 or later, built with Tree-sitter 0.20.3+.
+
+** Features
+
+- Blue and purple are used sparingly to help reduce eye strain
+- Red, yellow, and green are prioritized more for the same reason
+- Comments are colored specifically to be readable and have good contrast with other text and background
+- Many semantic highlighting tokens are handled and colored nicely
+- Multiple plugins are supported with hand-picked, proper colors
+- Colors, Highlights, and Code style of the theme can be customized as you like (Refer to Customization)
+
+[[file:./.image/show.png]]
+
+**NOTE:** The above screenshots utilize Tree-sitter parsers for ~lua~, ~markdown~,
+~markdown_inline~, ~mermaid~, and ~latex~.
+
+
+** Installation
+
+Install via your favorite package manager:
+
+#+BEGIN_SRC lua
+-- Using lazy.nvim
+{
+  'ribru17/iceberg.nvim',
+  lazy = false,
+  priority = 1000,
+  config = function()
+    require('iceberg').setup {
+      -- optional configuration here
+    }
+    require('iceberg').load()
+  end,
+}
+#+END_SRC
+
+**NOTE:** For best results, use (rounded) borders for float windows (or change their background to a slightly different color than the main editor background).
+
+** Configuration
+
+*** Enable theme
+
+#+BEGIN_SRC lua
+-- Lua
+require('iceberg').load()
+#+END_SRC
+
+#+BEGIN_SRC vim
+" Vim
+colorscheme iceberg
+#+END_SRC
+
+*** Default Configuration
+
+#+BEGIN_SRC lua
+-- Lua
+require('iceberg').setup  {
+    -- Main options --
+    transparent = false,  -- Show/hide background
+    term_colors = true, -- Change terminal color as per the selected theme style
+    ending_tildes = false, -- Show the end-of-buffer tildes. By default, they are hidden
+    cmp_itemkind_reverse = false, -- Reverse item kind highlights in cmp menu
+
+    -- Change code style ---
+    -- Options are italic, bold, underline, none
+    -- You can configure multiple styles with comma separated, e.g., keywords = 'italic,bold'
+    code_style = {
+        comments = 'italic',
+        keywords = 'none',
+        functions = 'none',
+        strings = 'none',
+        variables = 'none'
+    },
+
+    -- Lualine options --
+    lualine = {
+        transparent = false, -- lualine center bar transparency
+    },
+
+    -- Custom Highlights --
+    colors = {}, -- Override default colors
+    highlights = {}, -- Override highlight groups
+
+    -- Plugins Config --
+    diagnostics = {
+        darker = false, -- darker colors for diagnostic
+        undercurl = true,   -- use undercurl instead of underline for diagnostics
+        background = true,    -- use background color for virtual text
+    },
+}
+#+END_SRC
+
+*** Vimscript Configuration
+
+Bamboo can also be configured with Vimscript, using the global dictionary g:iceberg_config. NOTE: when setting boolean values use v:true and v:false instead of 0 and 1.
+
+Example:
+
+#+BEGIN_SRC vim
+let g:iceberg_config = {
+  \ 'ending_tildes': v:true,
+  \ 'diagnostics': {
+    \ 'darker': v:true,
+    \ 'background': v:false,
+  \ },
+\ }
+colorscheme iceberg
+#+END_SRC
+
+*** Customization
+
+Example using custom colors and highlights:
+
+#+BEGIN_SRC lua
+require('iceberg').setup {
+  colors = {
+    bright_orange = "#ff8800",    -- define a new color
+    green = '#00ffaa',            -- redefine an existing color
+  },
+  highlights = {
+    ["@keyword"] = {fg = '$green'},
+    ["@string"] = {fg = '$bright_orange', bg = '#00ff00', fmt = 'bold'},
+    ["@function"] = {fg = '#0000ff', sp = '$cyan', fmt = 'underline,italic'},
+    ["@function.builtin"] = {fg = '#0059ff'}
+  }
+}
+#+END_SRC
+
+Note that Tree-sitter keywords have changed after Neovim version 0.8 and onwards. TS prefix is trimmed and lowercase words are separated with `.`.
+
+The old way before Neovim 0.8 looks like this. All highlights used in this colorscheme can be found in [[https://github.com/phoenix988/iceberg.nvim/blob/master/lua/iceberg/highlights.lua][This file]].
+
+#+BEGIN_SRC lua
+require('iceberg').setup {
+  colors = {
+    bright_orange = "#ff8800",    -- define a new color
+    green = '#00ffaa',            -- redefine an existing color
+  },
+  highlights = {
+    TSKeyword = {fg = '$green'},
+    TSString = {fg = '$bright_orange', bg = '#00ff00', fmt = 'bold'},
+    TSFunction = {fg = '#0000ff', sp = '$cyan', fmt = 'underline,italic'},
+    TSFuncBuiltin = {fg = '#0059ff'}
+  }
+}
+#+END_SRC
