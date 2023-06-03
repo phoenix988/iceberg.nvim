@@ -1,7 +1,7 @@
 # Bamboo.nvim
 
-Dark green theme for Neovim $\ge$ 0.5 forked from
-[OneDark.nvim](https://github.com/navarasu/onedark.nvim). Theme written in Lua
+Dark blue theme for Neovim $\ge$ 0.5 forked from
+[Bamboo.nvim](https://github.com/ribru17/bamboo.nvim). Theme written in Lua
 with [Tree-sitter](https://github.com/nvim-treesitter/nvim-treesitter) syntax
 highlighting.
 
@@ -20,9 +20,6 @@ syntax highlighting, upgrade to Neovim 0.8.0 or later, built with Tree-sitter
 - `Colors`, `Highlights` and `Code style` of the theme can be customized as you
   like (Refer to [Customization](#customization))
 
-![bamboomdshowcase](https://github.com/ribru17/bamboo.nvim/assets/55766287/c2ce1883-d4ad-4ae0-a248-ef668d69aa87)
-![bamboocodeshowcase](https://github.com/ribru17/bamboo.nvim/assets/55766287/5eb2c125-13cd-46d6-841a-8af3f4406fc1)
-
 _NOTE:_ The above screenshots utilize Tree-sitter parsers for `lua`, `markdown`,
 `markdown_inline`, `mermaid`, and `latex`.
 
@@ -33,14 +30,14 @@ Install via your favorite package manager:
 ```lua
 -- Using lazy.nvim
 {
-  'ribru17/bamboo.nvim',
+  'ribru17/iceberg.nvim',
   lazy = false,
   priority = 1000,
   config = function()
-    require('bamboo').setup {
+    require('iceberg').setup {
       -- optional configuration here
     }
-    require('bamboo').load()
+    require('iceberg').load()
   end,
 }
 ```
@@ -54,19 +51,19 @@ their background to a slightly different color than the main editor background).
 
 ```lua
 -- Lua
-require('bamboo').load()
+require('iceberg').load()
 ```
 
 ```vim
 " Vim
-colorscheme bamboo
+colorscheme iceberg
 ```
 
 ## Default Configuration
 
 ```lua
 -- Lua
-require('bamboo').setup  {
+require('iceberg').setup  {
     -- Main options --
     transparent = false,  -- Show/hide background
     term_colors = true, -- Change terminal color as per the selected theme style
@@ -105,20 +102,20 @@ require('bamboo').setup  {
 ### Vimscript Configuration
 
 Bamboo can be configured also with Vimscript, using the global dictionary
-`g:bamboo_config`. **NOTE**: when setting boolean values use `v:true` and
+`g:iceberg_config`. **NOTE**: when setting boolean values use `v:true` and
 `v:false` instead of 0 and 1.
 
 Example:
 
 ```vim
-let g:bamboo_config = {
+let g:iceberg_config = {
   \ 'ending_tildes': v:true,
   \ 'diagnostics': {
     \ 'darker': v:true,
     \ 'background': v:false,
   \ },
 \ }
-colorscheme bamboo
+colorscheme iceberg
 ```
 
 ## Customization
@@ -126,7 +123,7 @@ colorscheme bamboo
 Example using custom colors and highlights:
 
 ```lua
-require('bamboo').setup {
+require('iceberg').setup {
   colors = {
     bright_orange = "#ff8800",    -- define a new color
     green = '#00ffaa',            -- redefine an existing color
@@ -145,10 +142,10 @@ onwards. TS prefix is trimmed and lowercase words are separated with `.`.
 
 The old way before neovim 0.8 looks like this. All highlights used in this
 colorscheme can be found in
-[this file](https://github.com/ribru17/bamboo.nvim/blob/master/lua/bamboo/highlights.lua).
+[this file](https://github.com/ribru17/iceberg.nvim/blob/master/lua/bamboo/highlights.lua).
 
 ```lua
-require('bamboo').setup {
+require('iceberg').setup {
   colors = {
     bright_orange = "#ff8800",    -- define a new color
     green = '#00ffaa',            -- redefine an existing color
@@ -187,6 +184,7 @@ require('bamboo').setup {
 - [Catppuccin for Neovim](https://github.com/catppuccin/nvim)
 - [tokyodark.nvim](https://github.com/tiagovla/tokyodark.nvim)
 - [one-dark-theme](https://github.com/andresmichel/one-dark-theme)
+- [iceberg for vim](https://github.com/cocopon/iceberg.vim)
 
 ## License
 
