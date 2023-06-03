@@ -13,7 +13,7 @@ return {
     green = '#C0CA8E',
     orange = '#F4C6A2',
     blue = '#84A0C6',
-    dark_blue = '#444B71'
+    dark_blue = '#444B71',
     yellow = '#E2A478',
     cyan = '#8FC1C3',
     red = '#E98989',
