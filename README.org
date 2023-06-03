@@ -13,7 +13,7 @@
 
 
 * Iceberg.nvim
-[[https://camo.githubusercontent.com/265b49d153bf446fc1f50a9a1e3a4aa4676de136c0bac925fbac66d4e7094288/68747470733a2f2f636f636f706f6e2e6769746875622e696f2f696365626572672e76696d2f6173736574732f6769746875622f32303138303830342f636f7665722e706e67]]
+[[url:https://camo.githubusercontent.com/265b49d153bf446fc1f50a9a1e3a4aa4676de136c0bac925fbac66d4e7094288/68747470733a2f2f636f636f706f6e2e6769746875622e696f2f696365626572672e76696d2f6173736574732f6769746875622f32303138303830342f636f7665722e706e67]]
 
 Dark blue theme for Neovim >= 0.5 forked from [[https://github.com/ribru17/bamboo.nvim][Bamboo.nvim]]. Theme written in Lua with [[https://github.com/nvim-treesitter/nvim-treesitter][Tree-sitter]] syntax highlighting.
 
@@ -28,6 +28,7 @@ For latest [[https://github.com/nvim-treesitter/nvim-treesitter][Tree-sitter]] s
 - Multiple plugins are supported with hand-picked, proper colors
 - Colors, Highlights, and Code style of the theme can be customized as you like (Refer to Customization)
 
+[[file:./.image/show.png]]
 [[file:./.image/show.png]]
 
 **NOTE:** The above screenshots utilize Tree-sitter parsers for ~lua~, ~markdown~,
