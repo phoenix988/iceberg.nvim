@@ -49,7 +49,7 @@ hl.common = {
   ColorColumn = { bg = c.bg1 },
   CursorLineNr = { fg = c.fg },
   LineNr = { fg = c.grey, bg = c.bg1 },
-  Highlight = { bg =  "#282A36" }
+  Highlight = { bg =  "#282A36" },
   Conceal = { fg = c.grey, bg = c.bg1 },
   DiffAdd = { fg = c.none, bg = c.diff_add },
   DiffChange = { fg = c.none, bg = c.diff_change },
