@@ -49,6 +49,7 @@ hl.common = {
   ColorColumn = { bg = c.bg1 },
   CursorLineNr = { fg = c.fg },
   LineNr = { fg = c.grey, bg = c.bg1 },
+  Highlight = { bg =  "#282A36" }
   Conceal = { fg = c.grey, bg = c.bg1 },
   DiffAdd = { fg = c.none, bg = c.diff_add },
   DiffChange = { fg = c.none, bg = c.diff_change },
@@ -88,7 +89,7 @@ hl.common = {
   TabLineFill = { fg = c.grey, bg = c.bg1 },
   TabLineSel = { fg = c.bg0, bg = c.fg },
   VertSplit = { fg = c.bg3 },
-  Visual = { bg = c.light_grey },
+  Visual = { bg = c.grey },
   VisualNOS = { fg = c.none, bg = c.bg2, fmt = 'underline' },
   QuickFixLine = { fg = c.blue, fmt = 'underline' },
   Debug = { fg = c.yellow },
