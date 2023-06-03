@@ -88,7 +88,7 @@ hl.common = {
   TabLineFill = { fg = c.grey, bg = c.bg1 },
   TabLineSel = { fg = c.bg0, bg = c.fg },
   VertSplit = { fg = c.bg3 },
-  Visual = { bg = c.bg3 },
+  Visual = { bg = c.bg1 },
   VisualNOS = { fg = c.none, bg = c.bg2, fmt = 'underline' },
   QuickFixLine = { fg = c.blue, fmt = 'underline' },
   Debug = { fg = c.yellow },
@@ -130,8 +130,8 @@ hl.syntax = {
   Title = colors.Cyan,
   Tag = colors.Green,
   Delimiter = colors.LightGrey,
-  Comment = { fg = c.bg_yellow, fmt = cfg.code_style.comments },
-  SpecialComment = { fg = c.bg_yellow, fmt = cfg.code_style.comments },
+  Comment = { fg = c.bg1, fmt = cfg.code_style.comments },
+  SpecialComment = { fg = c.bg1, fmt = cfg.code_style.comments },
   Todo = { fg = c.red, fmt = cfg.code_style.comments },
 }
 
