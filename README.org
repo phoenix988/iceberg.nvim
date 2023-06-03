@@ -11,8 +11,6 @@
   - [[Vimscript Configuration]]
   - [[Customization]]
 
-
-* Iceberg.nvim
 [[file:./.image/logo.png]]
 
 Dark blue theme for Neovim >= 0.5 forked from [[https://github.com/ribru17/bamboo.nvim][Bamboo.nvim]]. Theme written in Lua with [[https://github.com/nvim-treesitter/nvim-treesitter][Tree-sitter]] syntax highlighting.
