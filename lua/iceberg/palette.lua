@@ -23,7 +23,7 @@ return {
     dark_red = '#E27878',
     dark_yellow = '#C7895C',
     dark_purple = '#7A6B9D',
-    diff_add = '#A6B478',
+    diff_add = '#8F9D5A',
     diff_delete = '#C25C5C',
     diff_change = '#5E7B9D',
     diff_text = '#2D3D50',
