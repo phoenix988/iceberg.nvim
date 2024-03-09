@@ -24,7 +24,7 @@ local colors = {
   Cyan = { fg = c.cyan },
   Yellow = { fg = c.yellow },
   Orange = { fg = c.orange },
-  Green = { fg = c.green },
+  Green = { fg = c.diff_text },
   Blue = { fg = c.blue },
   Purple = { fg = c.purple },
 }
@@ -199,7 +199,7 @@ if vim.api.nvim_call_function('has', { 'nvim-0.8' }) == 1 then
     ['@text.reference'] = colors.Blue,
     ['@text.environment'] = colors.Fg,
     ['@text.environment.name'] = colors.Fg,
-    ['@text.diff.add'] = colors.Purple,
+    ['@text.diff.add'] = colors.Green,
     ['@text.diff.delete'] = colors.Red,
     ['@text.strong.markdown_inline'] = { fg = c.purple, fmt = 'bold' },
     ['@text.emphasis.markdown_inline'] = { fg = c.purple, fmt = 'italic' },
