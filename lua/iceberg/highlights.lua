@@ -50,7 +50,7 @@ hl.common = {
   CursorLineNr = { fg = c.fg, bg = c.bg1 },
   LineNr = { fg = c.dark_blue, bg = c.bg1 },
   Conceal = { fg = c.grey, bg = c.bg1 },
-  DiffAdd = { fg = c.none, bg = c.diff_add },
+  DiffAdd = { fg = c.diff_text, bg = c.diff_add },
   DiffChange = { fg = c.none, bg = c.diff_change },
   DiffDelete = { fg = c.none, bg = c.diff_delete },
   DiffText = { fg = c.none, bg = c.diff_text },
