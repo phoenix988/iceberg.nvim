@@ -54,7 +54,7 @@ hl.common = {
   DiffChange = { fg = c.none, bg = c.diff_change },
   DiffDelete = { fg = c.none, bg = c.diff_delete },
   DiffText = { fg = c.none, bg = c.diff_text },
-  DiffAdded = colors.Purple,
+  DiffAdded = colors.Green,
   DiffRemoved = colors.Red,
   DiffFile = colors.Cyan,
   DiffIndexLine = colors.Grey,
