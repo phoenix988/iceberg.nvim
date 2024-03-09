@@ -24,7 +24,7 @@ local colors = {
   Cyan = { fg = c.cyan },
   Yellow = { fg = c.yellow },
   Orange = { fg = c.orange },
-  Green = { fg = c.diff_text },
+  Green = { fg = c.green },
   Blue = { fg = c.blue },
   Purple = { fg = c.purple },
 }
